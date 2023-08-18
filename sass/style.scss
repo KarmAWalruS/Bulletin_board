@@ -194,3 +194,23 @@
     }
   }
 }
+
+@media (max-width: 992px) {
+  .header-search {
+    padding: 24px 10px;
+  }
+
+  .main-section {
+    .main-container {
+      .main-title {
+        padding: 32px 10px 24px 10px;
+      }
+
+      .cards-section {
+        &__container:not(:nth-child(4n)) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
