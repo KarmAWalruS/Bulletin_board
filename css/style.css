@@ -171,6 +171,9 @@
 }
 
 @media (max-width: 1360px) {
+  .header-search .search-container {
+    justify-content: center;
+  }
   .header-search .search-container .header-title {
     width: 190px;
     font-size: 20px;
@@ -199,9 +202,6 @@
   }
 }
 @media (max-width: 992px) {
-  .header-search .search-container {
-    justify-content: center;
-  }
   .header-search .search-container .search-input {
     width: 320px;
   }
