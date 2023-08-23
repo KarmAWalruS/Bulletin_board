@@ -1,7 +1,5 @@
 .container {
-  display: flex;
   max-width: 1290px;
-  position: relative;
   margin: 0 auto;
 }
 
@@ -9,6 +7,7 @@
   background: #1e293b;
 }
 .header-login .login-container {
+  display: flex;
   justify-content: flex-end;
 }
 .header-login__enter {
@@ -18,20 +17,19 @@
 .header-login__enter .login-btn {
   display: flex;
   align-items: center;
-}
-.header-login__enter .login-btn p {
-  margin-left: 8px;
   color: #fff;
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
 }
+.header-login__enter .login-btn svg {
+  margin-right: 8px;
+  fill: currentColor;
+}
 .header-login__enter .login-btn:hover {
   cursor: pointer;
-}
-.header-login__enter .login-btn:hover p {
   color: rgb(202, 199, 199);
 }
 .header-login__enter .new-ad-btn {
@@ -39,7 +37,6 @@
   padding: 6px 12px;
   margin-left: 24px;
   color: #fff;
-  gap: 4px;
   border: none;
   border-radius: 4px;
   background-color: #3b82f6;
@@ -47,6 +44,9 @@
   font-size: 14px;
   font-style: normal;
   line-height: 20px;
+}
+.header-login__enter .new-ad-btn span {
+  margin-left: 4px;
 }
 .header-login__enter .new-ad-btn:hover {
   cursor: pointer;
@@ -59,7 +59,6 @@
 }
 .header-search .search-container {
   display: flex;
-  width: 1290px;
   height: 36px;
 }
 .header-search .search-container .header-title {
@@ -120,72 +119,72 @@
   background-color: #316dcc;
 }
 
-.main-section {
+.main-container {
   display: flex;
   flex-direction: column;
 }
-.main-section .main-container .main-title {
+.main-container .main-title {
   padding: 32px 0 24px 0;
   font-family: Inter;
   font-size: 24px;
   font-style: normal;
   line-height: 32px;
 }
-.main-section .main-container .cards-section {
+.main-container .cards-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.main-section .main-container .cards-section__container:not(:nth-child(4n)) {
+.main-container .cards-section__container:not(:nth-child(4n)) {
   margin-right: 10px;
 }
-.main-section .main-container .cards-section__container {
+.main-container .cards-section__container {
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;
 }
-.main-section .main-container .cards-section__container .card-image {
+.main-container .cards-section__container .card-image {
   display: inline-block;
   overflow: hidden;
 }
-.main-section .main-container .cards-section__container .card-image img {
+.main-container .cards-section__container .card-image img {
   transition: 0.5s;
 }
-.main-section .main-container .cards-section__container .card-title {
+.main-container .cards-section__container .card-title {
   font-family: Inter, sans-serif;
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
   color: #3b82f6;
 }
-.main-section .main-container .cards-section__container .card-price {
+.main-container .cards-section__container .card-price {
   font-family: Inter, sans-serif;
   font-size: 18px;
   font-style: normal;
   line-height: 24px;
   color: #1e293b;
 }
-.main-section .main-container .cards-section__container .card-adress {
+.main-container .cards-section__container .card-adress {
   color: #64748b;
   font-family: Inter, sans-serif;
   font-size: 12px;
   font-style: normal;
   line-height: 20px;
 }
-.main-section .main-container .cards-section__container .card-date {
+.main-container .cards-section__container .card-date {
   color: #64748b;
   font-family: Inter, sans-serif;
   font-size: 12px;
   font-style: normal;
   line-height: 20px;
 }
-.main-section .main-container .cards-section__container:hover {
+.main-container .cards-section__container:hover {
   cursor: pointer;
 }
-.main-section .main-container .cards-section__container:hover img {
+.main-container .cards-section__container:hover img {
   transform: scale(1.2);
 }
-.main-section .main-container .cards-section__container:hover .card-title {
+.main-container .cards-section__container:hover .card-title {
   color: #316dcc;
 }
 
@@ -213,10 +212,10 @@
   .header-search .search-container .category-btn {
     margin: 0;
   }
-  .main-section .main-container .main-title {
+  .main-container .main-title {
     padding: 32px 10px 24px 10px;
   }
-  .main-section .main-container .cards-section__container:not(:nth-child(4n)) {
+  .main-container .cards-section__container:not(:nth-child(4n)) {
     margin-right: 0;
   }
 }
