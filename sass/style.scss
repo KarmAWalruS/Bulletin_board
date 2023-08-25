@@ -1,6 +1,21 @@
+/* header общий */
 .container {
   max-width: 1290px;
   margin: 0 auto;
+}
+
+.btn {
+  display: flex;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  background-color: #3b82f6;
+  font-family: Inter, sans-serif;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #316dcc;
 }
 
 .header-login {
@@ -37,14 +52,9 @@
     }
 
     .new-ad-btn {
-      display: flex;
       padding: 6px 12px;
       margin-left: 24px;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      background-color: #3b82f6;
-      font-family: Inter, sans-serif;
+
       font-size: 14px;
       font-style: normal;
       line-height: 20px;
@@ -52,11 +62,6 @@
       span {
         margin-left: 4px;
       }
-    }
-
-    .new-ad-btn:hover {
-      cursor: pointer;
-      background-color: #316dcc;
     }
   }
 }
@@ -110,29 +115,21 @@
     }
 
     .search-btn {
-      display: flex;
       justify-content: center;
       align-items: center;
       width: 91px;
       padding: 8px 12px;
-      color: #fff;
       gap: 8px;
       border-radius: 0px 4px 4px 0px;
-      border: none;
-      background-color: #3b82f6;
-      font-family: Inter, sans-serif;
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
       line-height: 20px;
     }
-
-    .search-btn:hover {
-      cursor: pointer;
-      background-color: #316dcc;
-    }
   }
 }
+
+/* main главной страницы */
 
 .main-container {
   display: flex;
@@ -287,6 +284,168 @@
 
       .search-input {
         width: 150px;
+      }
+    }
+  }
+}
+
+/* main страницы объявления */
+
+.ad-container {
+  display: flex;
+  flex-direction: column;
+
+  .breadcrumb {
+    padding: 10px 0;
+    list-style: none;
+
+    li {
+      display: inline;
+      font-size: 14px;
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    a {
+      color: #64748b;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #16191d;
+      text-decoration: underline;
+    }
+
+    li + li::before {
+      padding: 8px;
+      color: #64748b;
+      content: "\00B7";
+    }
+  }
+
+  .ad-content {
+    display: flex;
+    justify-content: space-between;
+
+    .left-wrapper {
+      width: 856px;
+      overflow: hidden;
+      .ad-title {
+        font-family: Inter, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 36px;
+      }
+
+      .gallery {
+        margin-top: 16px;
+
+        .column {
+          padding: 24px 10px 0 0;
+          float: left;
+
+          img {
+            width: 120px;
+            height: 84px;
+            opacity: 0.8;
+            cursor: pointer;
+          }
+
+          img:hover {
+            opacity: 1;
+          }
+        }
+
+        .column:focus {
+          border: 4px solid #3b82f6;
+          border-radius: 4px;
+        }
+      }
+    }
+
+    .right-wrapper {
+      width: 416px;
+      margin-left: 24px;
+      .ad-price {
+        font-family: Inter, sans-serif;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 36px;
+      }
+
+      .show-number {
+        justify-content: center;
+        align-items: center;
+        width: 416px;
+        height: 68px;
+        margin-top: 16px;
+        padding: 12px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        border-radius: 4px;
+
+        svg {
+          margin-right: 12px;
+        }
+      }
+      .ad-adress {
+        margin-top: 40px;
+        h2 {
+          font-family: Inter, sans-serif;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 32px;
+        }
+        p {
+          margin-top: 8px;
+          font-family: Inter, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          margin-top: 4px;
+          color: #3b82f6;
+          font-family: Inter, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          text-decoration: none;
+
+          svg {
+            margin-left: 8px;
+          }
+        }
+      }
+      .ad-description {
+        margin-top: 32px;
+        h2 {
+          font-family: Inter, sans-serif;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 32px;
+        }
+        p {
+          margin-top: 8px;
+          color: #1e293b;
+          font-family: Inter, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+        }
       }
     }
   }

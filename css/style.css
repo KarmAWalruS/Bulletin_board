@@ -1,6 +1,22 @@
+@charset "UTF-8";
+/* header общий */
 .container {
   max-width: 1290px;
   margin: 0 auto;
+}
+
+.btn {
+  display: flex;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  background-color: #3b82f6;
+  font-family: Inter, sans-serif;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #316dcc;
 }
 
 .header-login {
@@ -33,24 +49,14 @@
   color: rgb(202, 199, 199);
 }
 .header-login__enter .new-ad-btn {
-  display: flex;
   padding: 6px 12px;
   margin-left: 24px;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  background-color: #3b82f6;
-  font-family: Inter, sans-serif;
   font-size: 14px;
   font-style: normal;
   line-height: 20px;
 }
 .header-login__enter .new-ad-btn span {
   margin-left: 4px;
-}
-.header-login__enter .new-ad-btn:hover {
-  cursor: pointer;
-  background-color: #316dcc;
 }
 
 .header-search {
@@ -98,27 +104,19 @@
   outline: none;
 }
 .header-search .search-container .search-btn {
-  display: flex;
   justify-content: center;
   align-items: center;
   width: 91px;
   padding: 8px 12px;
-  color: #fff;
   gap: 8px;
   border-radius: 0px 4px 4px 0px;
-  border: none;
-  background-color: #3b82f6;
-  font-family: Inter, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
 }
-.header-search .search-container .search-btn:hover {
-  cursor: pointer;
-  background-color: #316dcc;
-}
 
+/* main главной страницы */
 .main-container {
   display: flex;
   flex-direction: column;
@@ -233,4 +231,148 @@
   .header-search .search-container .search-input {
     width: 150px;
   }
+}
+/* main страницы объявления */
+.ad-container {
+  display: flex;
+  flex-direction: column;
+}
+.ad-container .breadcrumb {
+  padding: 10px 0;
+  list-style: none;
+}
+.ad-container .breadcrumb li {
+  display: inline;
+  font-size: 14px;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.ad-container .breadcrumb a {
+  color: #64748b;
+  text-decoration: none;
+}
+.ad-container .breadcrumb a:hover {
+  color: #16191d;
+  text-decoration: underline;
+}
+.ad-container .breadcrumb li + li::before {
+  padding: 8px;
+  color: #64748b;
+  content: "·";
+}
+.ad-container .ad-content {
+  display: flex;
+  justify-content: space-between;
+}
+.ad-container .ad-content .left-wrapper {
+  width: 856px;
+  overflow: hidden;
+}
+.ad-container .ad-content .left-wrapper .ad-title {
+  font-family: Inter, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+}
+.ad-container .ad-content .left-wrapper .gallery {
+  margin-top: 16px;
+}
+.ad-container .ad-content .left-wrapper .gallery .column {
+  padding: 24px 10px 0 0;
+  float: left;
+}
+.ad-container .ad-content .left-wrapper .gallery .column img {
+  width: 120px;
+  height: 84px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.ad-container .ad-content .left-wrapper .gallery .column img:hover {
+  opacity: 1;
+}
+.ad-container .ad-content .left-wrapper .gallery .column:focus {
+  border: 4px solid #3b82f6;
+  border-radius: 4px;
+}
+.ad-container .ad-content .right-wrapper {
+  width: 416px;
+  margin-left: 24px;
+}
+.ad-container .ad-content .right-wrapper .ad-price {
+  font-family: Inter, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+}
+.ad-container .ad-content .right-wrapper .show-number {
+  justify-content: center;
+  align-items: center;
+  width: 416px;
+  height: 68px;
+  margin-top: 16px;
+  padding: 12px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  border-radius: 4px;
+}
+.ad-container .ad-content .right-wrapper .show-number svg {
+  margin-right: 12px;
+}
+.ad-container .ad-content .right-wrapper .ad-adress {
+  margin-top: 40px;
+}
+.ad-container .ad-content .right-wrapper .ad-adress h2 {
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+.ad-container .ad-content .right-wrapper .ad-adress p {
+  margin-top: 8px;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.ad-container .ad-content .right-wrapper .ad-adress a {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  color: #3b82f6;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+.ad-container .ad-content .right-wrapper .ad-adress a svg {
+  margin-left: 8px;
+}
+.ad-container .ad-content .right-wrapper .ad-description {
+  margin-top: 32px;
+}
+.ad-container .ad-content .right-wrapper .ad-description h2 {
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+.ad-container .ad-content .right-wrapper .ad-description p {
+  margin-top: 8px;
+  color: #1e293b;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }/*# sourceMappingURL=style.css.map */
